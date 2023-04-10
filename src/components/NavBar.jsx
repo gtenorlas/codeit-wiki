@@ -2,10 +2,11 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
+import TwitterIcon from "./Icon";
 
 
 const CustomLink = ({ href, title, className }) => {
-  const router = useRouter(); 
+  const router = useRouter();
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
@@ -36,7 +37,7 @@ const NavBar = () => {
 
       <nav>
         <Link href="/" target={"_blank"}>
-          T
+          <TwitterIcon/>
         </Link>
         <Link href="/" target={"_blank"}>
           T
