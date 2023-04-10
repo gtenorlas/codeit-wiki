@@ -1,4 +1,4 @@
-const TwitterIcon = ({className,...rest}) => (
+export const TwitterIcon = ({className,...rest}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1.23em"
@@ -14,7 +14,7 @@ const TwitterIcon = ({className,...rest}) => (
     />
   </svg>
 )
-export default TwitterIcon
+
 
 export const GithubIcon = ({ className, ...rest }) => (
   <svg
