@@ -12,7 +12,7 @@ export default function Home () {
             <Image src={profilePic} alt="CodeIt.Wiki" className="w-full h-auto"></Image>
           </div>
           <div className='w-1/2 flex flex-col items-center self-center'>
-            <AnimatedText text="Turning Vision Into Reality With Code and Design." className='!text-6xl'/>
+            <AnimatedText text="Turning Vision Into Reality With Code and Design." className='!text-6xl !text-left'/>
             <p>As a skilled developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and blogs, showcasing my experticse in React.js and web development.</p>
           </div>
         </div>
