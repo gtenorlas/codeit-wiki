@@ -28,7 +28,7 @@ export default function Home () {
             As a highly skilled Full-Stack Developer, I am committed to staying at the forefront of technology trends and constantly enhancing my skill set. With a keen eye for innovation, I am actively seeking new opportunities to leverage my versatile skills and add value to a dynamic team. If you are in need of a dependable and personable Full-Stack Developer who consistently delivers exceptional results, look no further. Let's collaborate to create cutting-edge web applications that propel your business to new heights of success.
             </p>
             <div className='flex items-center self-start mt-2'>
-              <Link href='dummy.pdf' target='_blank'
+              <Link href='https://resume.creddle.io/resume/8x8kylcpyj1' target='_blank'
               className="flex item-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
               >
                 Resume <LinkArrow className="w-6 ml-1"/>
