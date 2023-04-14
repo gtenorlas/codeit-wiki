@@ -114,4 +114,14 @@ export const LinkArrow = ({ className, ...rest }) => (
   </svg>
 );
 
+export const Circular = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    viewBox="0 0 1190 1190"
+    {...props}
+  >
+    <path d="M1157 1191H1V1h1190v1190h-34z" />
+  </svg>
+)
 
