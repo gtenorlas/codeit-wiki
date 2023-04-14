@@ -13,11 +13,19 @@ One of my favorite things about programming is that it's constantly evolving, wh
 
 I'm excited to be part of the Github community and look forward to collaborating with other developers on exciting projects. Let's build something great together!
 
-##Stacks Used
-- Next.js
-- React.js
-- Tailwind CSS
-- Framer Motion
+## Features
+
+- Next.js: A powerful and popular React framework that provides server-side rendering, static site generation, and other performance optimizations for fast-loading web pages.
+- React.js: A widely-used JavaScript library for building user interfaces that offers a modular and component-based approach to development, making it easy to manage and update your portfolio content.
+- Tailwind CSS: A highly customizable CSS framework that allows you to create modern and responsive user interfaces with minimal effort. CodeIt.Wiki leverages Tailwind CSS to create a visually appealing and responsive design that looks great on all devices.
+- Frame Motion: A motion library for React that provides smooth and interactive animations to add a touch of interactivity and engagement to your portfolio. CodeIt.Wiki uses Frame Motion to create eye-catching animations that bring your projects to life.
+
+## Key Highlights:
+
+- Responsive and modern design: CodeIt.Wiki is built with a mobile-first approach, ensuring that your portfolio looks great on all devices, including desktops, tablets, and smartphones.
+- Interactive animations: With Frame Motion, your portfolio projects come to life with smooth animations that add a dynamic and engaging element to your website.
+- Easy to update: Built with Next.js and React.js, CodeIt.Wiki offers a modular and component-based structure that makes it easy to update and customize your portfolio content, allowing you to keep your portfolio fresh and up-to-date.
+- Customizable: Tailwind CSS provides a plethora of customization options, allowing you to easily tailor the look and feel of CodeIt.Wiki to match your personal brand or style preferences.
 
 
 ## 🔑Demo
