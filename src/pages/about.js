@@ -1,8 +1,15 @@
+import Head from 'next/head'
 import React from 'react'
 
 const about = () => {
   return (
-    <div>about</div>
+    <>
+    <Head>
+      <title>Code It .Wiki | About Page</title>
+      <meta name="keywords" content="about" />
+      <meta name="description" content="About Page" />
+    </Head>
+    </>
   )
 }
 
