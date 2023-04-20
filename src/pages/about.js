@@ -13,7 +13,11 @@ const about = () => {
         <main className='flex w-full flex-col items-center justify-center'>
           <Layout className='pt-16'>
             <AnimatedText text='I Help Solve Problems Through Code' />
-            <div className='grid w-full grid-cols-8'></div>
+            <div className='grid w-full grid-cols-8 gap-16'>
+              <div>
+                <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>About Me</h2>
+              </div>
+            </div>
           </Layout>
         </main>
       </Head>
