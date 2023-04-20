@@ -11,8 +11,9 @@ const about = () => {
         <meta name='keywords' content='about' />
         <meta name='description' content='About Page' />
         <main className='flex w-full flex-col items-center justify-center'>
-          <Layout>
+          <Layout className='pt-16'>
             <AnimatedText text='I Help Solve Problems Through Code' />
+            <div className='grid w-full grid-cols-8'></div>
           </Layout>
         </main>
       </Head>
