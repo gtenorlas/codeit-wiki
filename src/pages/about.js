@@ -59,17 +59,17 @@ const about = () => {
               ></Image>
             </section>
             <div className='col-span-2 flex flex-col items-end justify-content'>
-              <div>
-                <span>20+</span>
-                <h2>projects completed</h2>
+              <div className='flex flex-col items-end justify-center'>
+                <span className='inline-block text-7xl font-bold'>20+</span>
+                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
               </div>
-              <div>
-                <span>20+</span>
-                <h2>projects completed</h2>
+              <div className='flex flex-col items-end justify-center'>
+                <span className='inline-block text-7xl font-bold'>20+</span>
+                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
               </div>
-              <div>
-                <span>20+</span>
-                <h2>projects completed</h2>
+              <div className='flex flex-col items-end justify-center'>
+                <span className='inline-block text-7xl font-bold'>20+</span>
+                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
               </div>
             </div>
           </div>
