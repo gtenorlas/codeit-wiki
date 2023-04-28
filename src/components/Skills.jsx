@@ -8,7 +8,7 @@ const Skill = ({ name, x, y }) => {
       absolute "
       whileHover={{ scale: 1.05 }}
       initial={{x:0,y:0}}
-      animate={{x:x,y:y}}
+      whileInView={{x:x,y:y}}
       transition={{duration:1.5}}
     >
       {name}
@@ -28,7 +28,19 @@ const Skills = () => {
           Web
         </motion.div>
         <Skill name='HTML' x='-20vw' y='2vw'/>
-        <Skill name='CSS' x='-5vw' y='-10vw'/>
+        <Skill name='CSS' x='-7vw' y='-12vw'/>
+        <Skill name='Javascript' x='23vw' y='6vw'/>
+        <Skill name='ReactJS' x='0vw' y='12vw'/>
+        <Skill name='NextJS' x='-25vw' y='-10vw'/>
+        <Skill name='NodeJS' x='15vw' y='-12vw'/>
+        <Skill name='Java' x='34vw' y='-5vw'/>
+        <Skill name='Python' x='0vw' y='-20vw'/>
+        <Skill name='Figma' x='-25vw' y='-18vw'/>
+        <Skill name='Tailwind CSS' x='10vw' y='18vw'/>
+        <Skill name='C#' x='-27vw' y='18vw'/>
+        <Skill name='Swift' x='-34vw' y='5vw'/>
+
+
       </div>
     </>
   );
