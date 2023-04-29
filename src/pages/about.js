@@ -6,6 +6,7 @@ import React, { useEffect, useRef } from 'react'
 import profilePicture from '../../public/images/profile/gpt1.png'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import Skills from '@/components/Skills'
+import Experience from '@/components/Experience'
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null)
@@ -108,6 +109,7 @@ const about = () => {
             </div>
           </div>
           <Skills/>
+          <Experience/>
         </Layout>
       </main>
     </>
