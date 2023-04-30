@@ -24,8 +24,21 @@ const Experience = () => {
       </h2>
 
       <div className="w-[75%] mx-auto relative">
-        <ul>
+        <div className="absolute left-8 top-0 w-[4px] h-full bg-dark origin-top" /> {/*line*/}
+        <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
+          position="Back-End Developer" company="RB&W"
+          time="January 2020 - April 2020"
+          address="Brampton, ON"
+          work="Developed API using Java and Spring. Test API using Postman, curl, and Junit"
+          />
+              <Details
+          position="Back-End Developer" company="RB&W"
+          time="January 2020 - April 2020"
+          address="Brampton, ON"
+          work="Developed API using Java and Spring. Test API using Postman, curl, and Junit"
+          />
+              <Details
           position="Back-End Developer" company="RB&W"
           time="January 2020 - April 2020"
           address="Brampton, ON"
