@@ -54,25 +54,26 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            position="Back-End Developer"
-            company="RB&W"
-            time="January 2020 - April 2020"
-            address="Brampton, ON"
-            work="Developed API using Java and Spring. Test API using Postman, curl, and Junit"
+            position="Full-Stack Developer"
+            company="Jobabot"
+            time="February 2023 - Present"
+            address="Mississauga, ON"
+            work="The project involved utilizing Node.js, Express, and PostgreSQL to build an API on the back-end. For the front-end views, Tailwind CSS, Next.js, and React.js were employed. The API was tested using various tools such as Postman and curl"
           />
-          <Details
+               <Details
             position="Back-End Developer"
             company="RB&W"
             time="January 2020 - April 2020"
             address="Brampton, ON"
-            work="Developed API using Java and Spring. Test API using Postman, curl, and Junit"
+            work="Engineered a dynamic and responsive API leveraging the power of Java and Spring Boot, delivering efficient and reliable solutions."
           />
+
           <Details
-            position="Back-End Developer"
-            company="RB&W"
-            time="January 2020 - April 2020"
-            address="Brampton, ON"
-            work="Developed API using Java and Spring. Test API using Postman, curl, and Junit"
+            position="User Acceptance Tester"
+            company="Finastra (D + H)"
+            time="August 2013 - February 2015"
+            address="Mississauga, ON"
+            work="In my previous role at a fin-tech company, I was responsible for creating and implementing comprehensive test plans and test cases. I also conducted rigorous testing and closely monitored results to ensure that any defects were promptly reported and addressed. Throughout this process, I utilized HP Quality Center to maintain organized records of all testing procedures and outcomes"
           />
         </ul>
       </div>
