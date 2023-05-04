@@ -16,9 +16,7 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">
-          {type}
-      </h3>
+        <h3 className="capitalize font-bold text-2xl">{type}</h3>
         <span className="capitalize font-medium text-dark/75">
           {time} | {place}
         </span>
@@ -36,9 +34,7 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">
-        Education
-      </h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
 
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
@@ -46,9 +42,8 @@ const Education = () => {
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-        <Details
+          <Details
             type="Diploma in Full-Stack Web Development"
-
             time="July 2022 - February 2023"
             place="Lighthouse Labs"
             info="
@@ -56,7 +51,6 @@ const Education = () => {
           />
           <Details
             type="Computer Systems Technology – Systems Analyst"
-
             time="January 2016 - December 2018"
             place="Sheridan College"
             info="Sheridan College's Computer Systems Technology - Systems Analyst program provides students with a diverse range of computing skills and knowledge, including full-stack development and mobile development. With a focus on the latest computing technologies, students will learn to analyze, plan, design, and implement computer systems, networking solutions, and databases. They will also gain proficiency in iOS and Android application development, Java, C#, .NET, and web technologies. Graduates will be equipped to participate in the deployment and administration of databases and automate routine tasks using various scripting tools and languages. They will have the ability to provide technical support and apply their knowledge of security issues to the implementation of information technology solutions. Graduates can pursue career opportunities such as web application developers, computer programmer analysts, and technical analysts, among others."
