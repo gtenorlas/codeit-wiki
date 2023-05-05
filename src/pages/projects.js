@@ -6,10 +6,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icon'
 import portfolio from '../../public/images/projects/portfolio.png'
+import interviewScheduler from '../../public/images/projects/interview_scheduler.png'
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className='w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+    <article className='w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl' />
       <Link
         href={link}
         target='_blank'
@@ -47,7 +49,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article>
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
       <Link
         href={link}
         target='_blank'
@@ -55,26 +57,25 @@ const Project = ({ title, type, img, link, github }) => {
       >
         <Image src={img} alt={title} className='w-full auto' />
       </Link>
-      <div className='w-full flex flex-col items-start justify-between pl-6'>
+      <div className='w-full flex flex-col items-start justify-between mt-4'>
         <span className='text-primary font-medium text-xl'>{type}</span>
         <Link
           href={link}
           target='_blank'
           className='hover:underline underline-offset-2'
         >
-          <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
         </Link>
-        <div className='mt-2 flex items-center'>
-          <Link href={github} target='_blank' className='w-10'>
-            <GithubIcon />
-          </Link>
+        <div className='w-full mt-2 flex items-center justify-between'>
           <Link
             href={link}
             target='_blank'
-            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-          '
+            className='text-lg font-semibold underline'
           >
             Visit
+          </Link>
+          <Link href={github} target='_blank' className='w-8'>
+            <GithubIcon />
           </Link>
         </div>
       </div>
@@ -93,7 +94,10 @@ const projects = () => {
 
       <main className='w-full mb-16 fle flex-col items-center justify-center'>
         <Layout className='pt-16'>
-          <AnimatedText text='Solving is part of learning' className='mb-16' />
+          <AnimatedText
+            text='Creativity and Learning through Projects'
+            className='mb-16'
+          />
 
           <div className='grid grid-cols-12 gap-24'>
             <div className='col-span-12'>
@@ -109,11 +113,10 @@ const projects = () => {
             <div className='col-span-6'>
               <Project
                 type='Project'
-                title='Quiz App'
-                img='quiz'
-                github='/'
-                link='/'
-
+                title='Interview Scheduler'
+                img={interviewScheduler}
+                github='https://github.com/gtenorlas/Interview-Scheduler'
+                link='https://github.com/gtenorlas/Interview-Scheduler'
               />
             </div>
             <div className='col-span-6'>Project-2</div>
