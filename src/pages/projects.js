@@ -11,13 +11,13 @@ import interviewScheduler from '../../public/images/projects/interview_scheduler
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article className='w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl' />
+      <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2.5rem] bg-dark' />
       <Link
         href={link}
         target='_blank'
         className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
       >
-        <Image src={img} alt={title} className='w-full auto' />
+        <Image src={img} alt={title} className='w-full h-auto' />
       </Link>
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
         <span className='text-primary font-medium text-xl'>{type}</span>
@@ -47,15 +47,16 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   )
 }
 
-const Project = ({ title, type, img, link, github }) => {
+const Project = ({ title, type, img, link, github, summary }) => {
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative shadow-xl'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl' />
       <Link
         href={link}
         target='_blank'
         className='w-full cursor-pointer overflow-hidden rounded-lg'
       >
-        <Image src={img} alt={title} className='w-full auto' />
+        <Image src={img} alt={title} className='w-full h-auto' />
       </Link>
       <div className='w-full flex flex-col items-start justify-between mt-4'>
         <span className='text-primary font-medium text-xl'>{type}</span>
@@ -66,6 +67,7 @@ const Project = ({ title, type, img, link, github }) => {
         >
           <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
         </Link>
+        <p className='my-2 font-medium text-dark'>{summary}</p>
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link
             href={link}
@@ -99,7 +101,36 @@ const projects = () => {
             className='mb-16'
           />
 
-          <div className='grid grid-cols-12 gap-24'>
+          <div className='grid grid-cols-12 gap-24 gap-y-32'>
+            <div className='col-span-12'>
+              <FeaturedProject
+                type='Featured Project'
+                title='Code It .Wiki Portfolio'
+                img={portfolio}
+                github='/'
+                link='/'
+                summary='This is my portfolio website that I created using Next.js, Tailwind CSS, and Framer Motion.'
+              />
+            </div>
+            <div className='col-span-6'>
+              <Project
+                type='React.js'
+                title='Interview Scheduler'
+                img={interviewScheduler}
+                github='https://github.com/gtenorlas/Interview-Scheduler'
+                link='https://github.com/gtenorlas/Interview-Scheduler'
+                summary='Front-end app created in React.js. A single page application that allows users to book and cancel interviews.'
+              />
+            </div>
+            <div className='col-span-6'>
+              <Project
+                type='Project'
+                title='Interview Scheduler'
+                img={interviewScheduler}
+                github='https://github.com/gtenorlas/Interview-Scheduler'
+                link='https://github.com/gtenorlas/Interview-Scheduler'
+              />
+            </div>
             <div className='col-span-12'>
               <FeaturedProject
                 type='Featured Project'
@@ -119,10 +150,15 @@ const projects = () => {
                 link='https://github.com/gtenorlas/Interview-Scheduler'
               />
             </div>
-            <div className='col-span-6'>Project-2</div>
-            <div className='col-span-12'>Featured Project</div>
-            <div className='col-span-6'>Project-3</div>
-            <div className='col-span-6'>Project-4</div>
+            <div className='col-span-6'>
+              <Project
+                type='Project'
+                title='Interview Scheduler'
+                img={interviewScheduler}
+                github='https://github.com/gtenorlas/Interview-Scheduler'
+                link='https://github.com/gtenorlas/Interview-Scheduler'
+              />
+            </div>
           </div>
         </Layout>
       </main>
