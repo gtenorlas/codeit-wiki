@@ -5,6 +5,10 @@ import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
 import orm from '../../public/images/orm.png'
+import { motion } from 'framer-motion'
+
+
+const FramerImage = motion(Image);
 
 const FeaturedBlog = ({ img, title, time, summary, link }) => {
   return (
@@ -12,9 +16,11 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
       <Link
         href={link}
         target='_blank'
-        className='w-full cursor-pointer overflow-hidden rounded-lg'
+        className='w-full inline-block cursor-pointer overflow-hidden rounded-lg'
       >
-        <Image src={img} alt={title} className='w-full h-auto' />
+        <FramerImage src={img} alt={title} className='w-full h-auto'
+        whileHover={{scale:1.05}}
+        transition={{duration: 0.2}}/>
       </Link>
       <Link href={link} targt='_blank'>
         <h2 className='capitalize text-2xl font-bold my-2 hover:underline hover:underline-offset-2'>{title}</h2>
