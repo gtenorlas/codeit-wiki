@@ -12,7 +12,8 @@ const FramerImage = motion(Image);
 
 const FeaturedBlog = ({ img, title, time, summary, link }) => {
   return (
-    <li className='col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl'>
+    <li className='relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl' />
       <Link
         href={link}
         target='_blank'
