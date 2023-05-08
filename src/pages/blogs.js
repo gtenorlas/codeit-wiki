@@ -11,11 +11,13 @@ const FramerImage = motion(Image)
 
 const Blog = ({ img, title, date, link }) => {
   return (
-    <li>
+    <li className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark
+    border-r-4 border-b-4
+    '>
       <Link href={link} target='_blank'>
-        {title}
+       <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
       </Link>
-      <span>{date}</span>
+      <span className="text-primary font-semibold pl-4">{date}</span>
     </li>
   )
 }
@@ -79,6 +81,13 @@ const blogs = () => {
             All Blogs
           </h2>
           <ul>
+            <Blog
+              title='ORMs for JavaScript'
+              summary='Explain what ORM is and provide known ORMs in Javascript.'
+              date='April, 5 2023'
+              link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
+              img={orm}
+            />
             <Blog
               title='ORMs for JavaScript'
               summary='Explain what ORM is and provide known ORMs in Javascript.'
