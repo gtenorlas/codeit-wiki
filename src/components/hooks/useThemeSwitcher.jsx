@@ -1,53 +1,52 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 const useThemeSwitcher = () => {
-  const prefersDarkMode = "(prefers-color-scheme: dark)"; // media query
   const [mode, setMode] = useState("");
-
+  const prefersDarkMode = "(prefers-color-scheme: dark)"; // media query
   //check local storage or media query for theme
   useEffect(() => {
-    const mediaQuery=window.matchMedia(prefersDarkMode)
-    const userPref= window.localStorage.getItem("theme");
+    const mediaQuery = window.matchMedia(prefersDarkMode);
+    const userPref = window.localStorage.getItem("theme");
 
     const handleChange = () => {
-      if(userPref){
-        let check=userPref === "dark" ? true : false;
+      if (userPref) {
+        let check = userPref === "dark" ? "dark" : "light";
         setMode(check);
-        if(check==="dark") {
+        if (check === "dark") {
           document.documentElement.classList.add("dark");
-        }else{
+        } else {
           document.documentElement.classList.remove("dark");
         }
-      }else {
-        let check=mediaQuery.matches ? true : false;
+      } else {
+        let check = mediaQuery.matches ? "dark" : "light";
         setMode(check);
-        if(check==="dark") {
+        if (check === "dark") {
           document.documentElement.classList.add("dark");
-        }else{
+        } else {
           document.documentElement.classList.remove("dark");
         }
       }
-    }
-    mediaQuery.addEventListener("change", handleChange)
+    };
+    mediaQuery.addEventListener("change", handleChange);
 
-    return()=>mediaQuery.removeEventListener("change", handleChange)
-  }, [])
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   //set theme to local storage and document
-  useEffect(()=>{
-    if(mode==="dark") {
-      document.documentElement.classList.add("dark");
+  useEffect(() => {
+    if (mode === "dark") {
+
       window.localStorage.setItem("theme", "dark");
-    }else{
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("dark");
+    } else {
       window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+
     }
-    return[mode,setMode]
-  }, [mode])
 
-  return (
-    <div>useThemeSwitcher</div>
-  )
-}
+  }, [mode]);
 
-export default useThemeSwitcher
+  return [mode, setMode];
+};
+
+export default useThemeSwitcher;
