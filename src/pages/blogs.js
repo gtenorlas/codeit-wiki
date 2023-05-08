@@ -20,20 +20,30 @@ const MovingImg = ({ title, img, link }) => {
     y.set(-10);
   }
 
+  const handleMouseLeave=(event)=>{
+    imgRef.current.style.display="none";
+    x.set(0);
+    y.set(0);
+  }
+
   return (
 
 
     <Link href={link} target='_blank'
     onMouseMove={handleMouse}
+    onMouseLeave={handleMouseLeave}
     >
       <h2 className='capitalize text-xl font-semibold hover:underline'>
         {title}
       </h2>
-      <Image
+      <FramerImage
+      style={{x,y}}
+      initial={{opacity:0}}
+      whileInView={{opacity:1,transition:{duration:0.2}}}
       ref={imgRef}
         src={img}
         alt={title}
-        className='w-96 auto hidden absolute rounded-lg'
+        className='z-10 w-96 auto hidden absolute rounded-lg'
       />
     </Link>
   )
