@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
 import orm from '../../public/images/orm.png'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue } from 'framer-motion'
 
 const FramerImage = motion(Image)
 
 const MovingImg = ({ title, img, link }) => {
+  const  x = useMotionValue(0);
+  const y = useMotionValue(1);
+  const imgRef=useRef(null);
+
+  const handleMouse=(event)=>{
+    imgRef.current.style.display="inline-block";
+    x.set(event.pageX);
+    y.set(-10);
+  }
+
   return (
-    <Link href={link} target='_blank'>
+
+
+    <Link href={link} target='_blank'
+    onMouseMove={handleMouse}
+    >
       <h2 className='capitalize text-xl font-semibold hover:underline'>
         {title}
       </h2>
       <Image
+      ref={imgRef}
         src={img}
         alt={title}
         className='w-96 auto hidden absolute rounded-lg'
