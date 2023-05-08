@@ -9,15 +9,30 @@ import { motion } from 'framer-motion'
 
 const FramerImage = motion(Image)
 
+const MovingImg = ({ title, img, link }) => {
+  return (
+    <Link href={link} target='_blank'>
+      <h2 className='capitalize text-xl font-semibold hover:underline'>
+        {title}
+      </h2>
+      <Image
+        src={img}
+        alt={title}
+        className='w-96 auto hidden absolute rounded-lg'
+      />
+    </Link>
+  )
+}
+
 const Blog = ({ img, title, date, link }) => {
   return (
-    <li className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark
+    <li
+      className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark
     border-r-4 border-b-4
-    '>
-      <Link href={link} target='_blank'>
-       <h2 className="capitalize text-xl font-semibold hover:underline">{title}</h2>
-      </Link>
-      <span className="text-primary font-semibold pl-4">{date}</span>
+    '
+    >
+      <MovingImg title={title} img={img} link={link} />
+      <span className='text-primary font-semibold pl-4'>{date}</span>
     </li>
   )
 }
