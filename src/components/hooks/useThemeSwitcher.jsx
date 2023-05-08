@@ -33,6 +33,18 @@ const useThemeSwitcher = () => {
     return()=>mediaQuery.removeEventListener("change", handleChange)
   }, [])
 
+  //set theme to local storage and document
+  useEffect(()=>{
+    if(mode==="dark") {
+      document.documentElement.classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
+    }else{
+      document.documentElement.classList.remove("dark");
+      window.localStorage.setItem("theme", "light");
+    }
+    return[mode,setMode]
+  }, [mode])
+
   return (
     <div>useThemeSwitcher</div>
   )
