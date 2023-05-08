@@ -10,6 +10,7 @@ import {
   GithubIcon,
 } from "./Icon";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className }) => {
   const router = useRouter();
@@ -31,6 +32,7 @@ const CustomLink = ({ href, title, className }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -87,6 +89,10 @@ const NavBar = () => {
         >
           <PinterestIcon />
         </motion.a>
+        <button>
+{mode === "dark" ? ():()
+  }
+        </button>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
