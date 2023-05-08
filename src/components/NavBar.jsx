@@ -8,6 +8,8 @@ import {
   LinkedInIcon,
   PinterestIcon,
   GithubIcon,
+  SunIcon,
+  MoonIcon,
 } from "./Icon";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -89,9 +91,15 @@ const NavBar = () => {
         >
           <PinterestIcon />
         </motion.a>
-        <button>
-{mode === "dark" ? ():()
-  }
+        <button
+        onClick={()=>setMode(mode==="dark"?"light":"dark")}
+        className="ml-3 flex items-center justify-center  rounded-full p-1"
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-light"} />
+          )}
         </button>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
