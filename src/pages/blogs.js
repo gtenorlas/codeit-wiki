@@ -7,8 +7,18 @@ import Image from 'next/image'
 import orm from '../../public/images/orm.png'
 import { motion } from 'framer-motion'
 
+const FramerImage = motion(Image)
 
-const FramerImage = motion(Image);
+const Blog = ({ img, title, date, link }) => {
+  return (
+    <li>
+      <Link href={link} target='_blank'>
+        {title}
+      </Link>
+      <span>{date}</span>
+    </li>
+  )
+}
 
 const FeaturedBlog = ({ img, title, time, summary, link }) => {
   return (
@@ -19,12 +29,18 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
         target='_blank'
         className='w-full inline-block cursor-pointer overflow-hidden rounded-lg'
       >
-        <FramerImage src={img} alt={title} className='w-full h-auto'
-        whileHover={{scale:1.05}}
-        transition={{duration: 0.2}}/>
+        <FramerImage
+          src={img}
+          alt={title}
+          className='w-full h-auto'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <Link href={link} targt='_blank'>
-        <h2 className='capitalize text-2xl font-bold my-2 hover:underline hover:underline-offset-2'>{title}</h2>
+        <h2 className='capitalize text-2xl font-bold my-2 mt-4 hover:underline hover:underline-offset-2'>
+          {title}
+        </h2>
       </Link>
       <p className='text-sm mb-2'>{summary}</p>
       <span className='text-primary font-semibold'>{time}</span>
@@ -44,8 +60,32 @@ const blogs = () => {
         <Layout className='pt-16'>
           <AnimatedText text='Stay up-to-date with Blogs' className='mb-16' />
           <ul className='grid grid-cols-2 gap-16'>
-            <FeaturedBlog title="ORMs for JavaScript" summary="Explain what ORM is and provide known ORMs in Javascript." time="9 min read" link="https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8" img={orm}/>
-            <FeaturedBlog title="ORMs for JavaScript" summary="Explain what ORM is and provide known ORMs in Javascript." time="9 min read" link="https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8" img={orm}/>
+            <FeaturedBlog
+              title='ORMs for JavaScript'
+              summary='Explain what ORM is and provide known ORMs in Javascript.'
+              time='9 min read'
+              link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
+              img={orm}
+            />
+            <FeaturedBlog
+              title='ORMs for JavaScript'
+              summary='Explain what ORM is and provide known ORMs in Javascript.'
+              time='9 min read'
+              link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
+              img={orm}
+            />
+          </ul>
+          <h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>
+            All Blogs
+          </h2>
+          <ul>
+            <Blog
+              title='ORMs for JavaScript'
+              summary='Explain what ORM is and provide known ORMs in Javascript.'
+              date='April, 5 2023'
+              link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
+              img={orm}
+            />
           </ul>
         </Layout>
       </main>
