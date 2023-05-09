@@ -37,7 +37,7 @@ const about = () => {
         <meta name='keywords' content='about' />
         <meta name='description' content='About Page' />
       </Head>
-      <main className='flex w-full flex-col items-center justify-center'>
+      <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText
             text='Solving Ignites My Creativity'
@@ -87,7 +87,7 @@ const about = () => {
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={20} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                   projects completed
                 </h2>
               </div>
@@ -95,7 +95,7 @@ const about = () => {
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={30} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                   blogs/videos completed
                 </h2>
               </div>
@@ -103,7 +103,7 @@ const about = () => {
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={6} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                   years of experience
                 </h2>
               </div>
