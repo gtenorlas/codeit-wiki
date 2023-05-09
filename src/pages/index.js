@@ -24,7 +24,9 @@ export default function Home () {
           <div className='w-1/2 flex flex-col items-center self-center'>
             <AnimatedText
               text='Helping provide solutions through Code and Design.'
-              className='!text-5xl !text-left'
+              className='!text-5xl !text-left
+              xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl
+              '
             />
             <p className='my-4 text-base'>
             As a highly skilled Full-Stack Developer, I am committed to staying at the forefront of technology trends and constantly enhancing my skill set. With a keen eye for innovation, I am actively seeking new opportunities to leverage my versatile skills and add value to a dynamic team. If you are in need of a dependable and personable Full-Stack Developer who consistently delivers exceptional results, look no further. Let's collaborate to create cutting-edge web applications that propel your business to new heights of success.
