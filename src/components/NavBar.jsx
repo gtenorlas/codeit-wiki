@@ -45,17 +45,17 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group`}
+      className={`${className} relative group my-2 text-light dark:text-dark`}
       onClick={handleClick}
     >
       {title}
 
       <span
         className={`
-      h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+      h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
 
       ${router.asPath === href ? "w-full" : "w-0"}
-      dark:bg-light
+      dark:bg-dark
       `}
       >
         &nbsp;
@@ -166,7 +166,9 @@ const NavBar = () => {
         </nav>
       </div>
       {isOpen ? (
-        <div
+        <motion.div
+
+
           className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
       bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
       "
@@ -176,41 +178,41 @@ const NavBar = () => {
               toggle={handleClick}
               href="/"
               title="Home"
-              className="mr-4"
+              className=""
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/about"
               title="About"
-              className="mx-4"
+              className=""
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/projects"
               title="Projects"
-              className="mx-4"
+              className=""
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/blogs"
               title="Blogs"
-              className="mx-4"
+              className=""
             />
             <CustomMobileLink
               toggle={handleClick}
               href="/#HireMe"
               title="Hire Me"
-              className="mx-4"
+              className=""
             />
           </nav>
 
-          <nav className="flex item-center justify-center flex-wrap">
+          <nav className="flex item-center justify-around flex-wrap mt-2">
             <motion.a
               href="/"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
+              className="w-6 mx-3 sm:mx-1"
             >
               <LinkedInIcon />
             </motion.a>
@@ -219,7 +221,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
+              className="w-6 mx-3 text-light dark:text-dark sm:mx-1"
             >
               <GithubIcon />
             </motion.a>
@@ -228,7 +230,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
+              className="w-6 mx-3 sm:mx-1"
             >
               <DribbbleIcon />
             </motion.a>
@@ -237,7 +239,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3"
+              className="w-6 mx-3 sm:mx-1"
             >
               <TwitterIcon />
             </motion.a>
@@ -246,13 +248,13 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 ml-3"
+              className="w-6 mx-3 sm:mx-1"
             >
               <PinterestIcon />
             </motion.a>
             <button
               onClick={() => setMode(mode === "dark" ? "light" : "dark")}
-              className={`ml-4 mr-4 flex items-center justify-center rounded-full p-1
+              className={`ml-3 w-6 flex items-center justify-center rounded-full sm:mx-1
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
               {mode === "dark" ? (
@@ -262,7 +264,7 @@ const NavBar = () => {
               )}
             </button>
           </nav>
-        </div>
+        </motion.div>
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
