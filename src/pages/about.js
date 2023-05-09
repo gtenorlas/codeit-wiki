@@ -74,12 +74,12 @@ const about = () => {
                 together to create something truly amazing!
               </p>
             </section>
-            <section className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
+            <section className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light' />
               <Image
                 src={profilePicture}
                 alt='Gene Tenorlas'
-                className='w-full h-auto rounded-2xl'
+                className='w-full h-auto rounded-2xl bg-dark dark:bg-light'
               ></Image>
             </section>
             <div className='col-span-2 flex flex-col items-end justify-between'>
