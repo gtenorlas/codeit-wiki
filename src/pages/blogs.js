@@ -10,37 +10,37 @@ import { motion, useMotionValue } from 'framer-motion'
 const FramerImage = motion(Image)
 
 const MovingImg = ({ title, img, link }) => {
-  const  x = useMotionValue(0);
-  const y = useMotionValue(1);
-  const imgRef=useRef(null);
+  const x = useMotionValue(0)
+  const y = useMotionValue(1)
+  const imgRef = useRef(null)
 
-  const handleMouse=(event)=>{
-    imgRef.current.style.display="inline-block";
-    x.set(event.pageX);
-    y.set(-10);
+  const handleMouse = event => {
+    imgRef.current.style.display = 'inline-block'
+    x.set(event.pageX)
+    y.set(-10)
   }
 
-  const handleMouseLeave=(event)=>{
-    imgRef.current.style.display="none";
-    x.set(0);
-    y.set(0);
+  const handleMouseLeave = event => {
+    imgRef.current.style.display = 'none'
+    x.set(0)
+    y.set(0)
   }
 
   return (
-
-
-    <Link href={link} target='_blank'
-    onMouseMove={handleMouse}
-    onMouseLeave={handleMouseLeave}
+    <Link
+      href={link}
+      target='_blank'
+      onMouseMove={handleMouse}
+      onMouseLeave={handleMouseLeave}
     >
       <h2 className='capitalize text-xl font-semibold hover:underline'>
         {title}
       </h2>
       <FramerImage
-      style={{x,y}}
-      initial={{opancity:0}}
-      whileInView={{opacity:1,transition:{duration:0.2}}}
-      ref={imgRef}
+        style={{ x, y }}
+        initial={{ opancity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
+        ref={imgRef}
         src={img}
         alt={title}
         className='z-10 w-96 auto hidden absolute rounded-lg'
@@ -52,15 +52,17 @@ const MovingImg = ({ title, img, link }) => {
 const Blog = ({ img, title, date, link }) => {
   return (
     <motion.li
-    initial={{y:200}}
-    whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"}}}
-    viewport={{once:true}}
+      initial={{ y: 200 }}
+      whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
+      viewport={{ once: true }}
       className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark
     border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light
     '
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className='text-primary font-semibold pl-4 dark:text-primaryDark'>{date}</span>
+      <span className='text-primary font-semibold pl-4 dark:text-primaryDark'>
+        {date}
+      </span>
     </motion.li>
   )
 }
@@ -80,6 +82,8 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
           className='w-full h-auto'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
         />
       </Link>
       <Link href={link} targt='_blank'>
@@ -88,7 +92,9 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
         </h2>
       </Link>
       <p className='text-sm mb-2'>{summary}</p>
-      <span className='text-primary font-semibold dark:text-primaryDark'>{time}</span>
+      <span className='text-primary font-semibold dark:text-primaryDark'>
+        {time}
+      </span>
     </li>
   )
 }
