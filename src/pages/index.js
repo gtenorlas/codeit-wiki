@@ -9,7 +9,7 @@ import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
 
 export default function Home () {
   return (
-    <main className='flex items-center text-dark w-full min-h-screen'>
+    <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
       <Layout className='pt-0'>
         <div className='flex items-center justify-between w-full'>
           <div className='w-1/2 pr-8'>
