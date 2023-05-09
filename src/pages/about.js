@@ -75,7 +75,7 @@ const about = () => {
               </p>
             </section>
             <section className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
+              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light' />
               <Image
                 src={profilePicture}
                 alt='Gene Tenorlas'
