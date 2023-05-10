@@ -75,7 +75,7 @@ const NavBar = () => {
   return (
     <header
       className="w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative"
+    dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8"
     >
       <button
         className="flex-col justify-center items-center hidden lg:flex"
@@ -103,8 +103,7 @@ const NavBar = () => {
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
           <CustomLink href="/blogs" title="Blogs" className="mx-4" />
-          <CustomLink href="/#HireMe" title="Hire Me" className="mx-4" />
-        </nav>
+         </nav>
 
         <nav className="flex item-center justify-center flex-wrap">
           <motion.a
@@ -196,12 +195,6 @@ const NavBar = () => {
               toggle={handleClick}
               href="/blogs"
               title="Blogs"
-              className=""
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              href="/#HireMe"
-              title="Hire Me"
               className=""
             />
           </nav>
