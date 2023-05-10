@@ -47,7 +47,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             {title}
           </h2>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light sm:text-sm'>{summary}</p>
         <div className='mt-2 flex items-center'>
           <Link href={github} target='_blank' className='w-10'>
             <GithubIcon />
@@ -68,8 +68,10 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github, summary }) => {
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative shadow-xl dark:bg-dark dark:border-light'>
-      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light' />
+    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid
+     border-dark bg-light p-6 relative shadow-xl dark:bg-dark dark:border-light xs:p-4'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem]
+      bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]' />
       <Link
         href={link}
         target='_blank'
@@ -86,7 +88,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
         />
       </Link>
       <div className='w-full flex flex-col items-start justify-between mt-4'>
-        <span className='text-primary font-medium text-xl dark:text-primaryDark'>
+        <span className='text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base'>
           {type}
         </span>
         <Link
@@ -94,18 +96,18 @@ const Project = ({ title, type, img, link, github, summary }) => {
           target='_blank'
           className='hover:underline underline-offset-2'
         >
-          <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-3xl font-bold lg:text-2xl'>{title}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light sm:text-xs'>{summary}</p>
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link
             href={link}
             target='_blank'
-            className='text-lg font-semibold underline'
+            className='text-lg font-semibold underline md:text-base'
           >
             Visit
           </Link>
-          <Link href={github} target='_blank' className='w-8'>
+          <Link href={github} target='_blank' className='w-8 md:w-6'>
             <GithubIcon />
           </Link>
         </div>
@@ -141,7 +143,7 @@ const projects = () => {
                 summary='This is my portfolio website that I created using Next.js, Tailwind CSS, and Framer Motion.'
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 type='React.js'
                 title='Interview Scheduler'
@@ -151,7 +153,7 @@ const projects = () => {
                 summary='Front-end app created in React.js. A single page application that allows users to book and cancel interviews.'
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 type='Project'
                 title='Interview Scheduler'
@@ -170,7 +172,7 @@ const projects = () => {
                 summary='This is my portfolio website that I created using Next.js, Tailwind CSS, and Framer Motion.'
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 type='Project'
                 title='Interview Scheduler'
@@ -179,7 +181,7 @@ const projects = () => {
                 link='https://github.com/gtenorlas/Interview-Scheduler'
               />
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <Project
                 type='Project'
                 title='Interview Scheduler'
