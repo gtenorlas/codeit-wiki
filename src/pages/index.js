@@ -15,9 +15,9 @@ export default function Home () {
         <title>Code It .Wiki | Gene Tenorlas Portfolio</title>
         <meta
           name='keywords'
-          content='GeneTenorlas,homepage,codeit.wiki,portfolio'
+          content='GeneTenorlas,homepage,codeit.wiki,portfolio, full-stack developer, back-end developer, front-end developer, mobile developer, full-stack engineer, mobile engineer, software engineer, software developer'
         />
-        <meta name='description' content='Homepage' />
+        <meta name='description' content='My portfolio showcases top-tier web development projects & informative blogs. Let my skills and experiences bring your online vision to life.' />
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
         <Layout className='pt-0 md:pt-4 sm:pt-0'>
@@ -48,7 +48,7 @@ export default function Home () {
                 actively seeking new opportunities to leverage my versatile
                 skills and add value to a dynamic team. If you are in need of a
                 dependable and personable Full-Stack Developer who consistently
-                delivers exceptional results, look no further. Let's collaborate
+                delivers exceptional results, look no further. Let&apos;s collaborate
                 to create cutting-edge web applications that propel your
                 business to new heights of success.
               </p>

@@ -35,7 +35,7 @@ const about = () => {
       <Head>
         <title>Code It .Wiki | About Page</title>
         <meta name='keywords' content='about' />
-        <meta name='description' content='About Page' />
+        <meta name='description' content='Code It .Wiki About Page' />
       </Head>
       <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
@@ -71,7 +71,7 @@ const about = () => {
                 in the digital world. As a Full-Stack Developer, I am committed
                 to using my skills and experience to help launch your site and
                 turn your ideas into reality. I am excited to collaborate with
-                you and help take your business to the next level. Let's work
+                you and help take your business to the next level. Let&apos;s work
                 together to create something truly amazing!
               </p>
             </section>

@@ -107,16 +107,16 @@ const NavBar = () => {
 
         <nav className="flex item-center justify-center flex-wrap">
           <motion.a
-            href="/"
+            href="https://www.linkedin.com/in/genetenorlas/"
             target={"_blank"}
-            whileHover={{ y: -2 }}
+                whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
           >
             <LinkedInIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://github.com/gtenorlas"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -134,7 +134,7 @@ const NavBar = () => {
             <DribbbleIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://twitter.com/gene_tenorlas"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -201,16 +201,16 @@ const NavBar = () => {
 
           <nav className="flex item-center justify-around flex-wrap mt-2">
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/genetenorlas/"
               target={"_blank"}
-              whileHover={{ y: -2 }}
+                           whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
             >
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://github.com/gtenorlas"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -228,7 +228,7 @@ const NavBar = () => {
               <DribbbleIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://twitter.com/gene_tenorlas"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
