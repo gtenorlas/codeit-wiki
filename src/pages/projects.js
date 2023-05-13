@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { GithubIcon } from '@/components/Icon'
 import portfolio from '../../public/images/projects/portfolio.png'
 import interviewScheduler from '../../public/images/projects/interview_scheduler.png'
+import learnthis from '../../public/images/projects/learnthis.png'
 import { motion } from 'framer-motion'
 
 const FramerImage = motion(Image)
@@ -136,11 +137,11 @@ const projects = () => {
             <div className='col-span-12'>
               <FeaturedProject
                 type='Featured Project'
-                title='Code It .Wiki Portfolio'
-                img={portfolio}
-                github='/'
-                link='/'
-                summary='This is my portfolio website that I created using Next.js, Tailwind CSS, and Framer Motion.'
+                title='LearnThis!'
+                img={learnthis}
+                github='https://github.com/gtenorlas/lhlfinals'
+                link='https://github.com/gtenorlas/lhlfinals'
+                summary='Keep your resource bookmarks all in one convenient location while having a quick organizational system and a built in learning program to actually study from your saved materials!'
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
