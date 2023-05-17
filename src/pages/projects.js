@@ -156,11 +156,11 @@ const projects = () => {
             </div>
             <div className='col-span-6 sm:col-span-12'>
               <Project
-                type='Project'
-                title='Interview Scheduler'
+                type='HTML, Sass, Javascript, jQuery, Ajax'
+                title='Tweeter'
                 img={interviewScheduler}
-                github='https://github.com/gtenorlas/Interview-Scheduler'
-                link='https://github.com/gtenorlas/Interview-Scheduler'
+                github='https://github.com/gtenorlas/tweeterr'
+                link='https://github.com/gtenorlas/tweeter'
               />
             </div>
             <div className='col-span-12'>
