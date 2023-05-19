@@ -8,6 +8,7 @@ import { GithubIcon } from '@/components/Icon'
 import portfolio from '../../public/images/projects/portfolio.png'
 import interviewScheduler from '../../public/images/projects/interview_scheduler.png'
 import learnthis from '../../public/images/projects/learnthis.png'
+import tweeter from '../../public/images/projects/tweeter.png'
 import { motion } from 'framer-motion'
 
 const FramerImage = motion(Image)
@@ -158,19 +159,20 @@ const projects = () => {
               <Project
                 type='HTML, Sass, Javascript, jQuery, Ajax'
                 title='Tweeter'
-                img={interviewScheduler}
+                img={tweeter}
                 github='https://github.com/gtenorlas/tweeterr'
                 link='https://github.com/gtenorlas/tweeter'
+                summary="Tweeter is a simple, single-page Twitter clone. Twit, like and responsive in different devices."
               />
             </div>
             <div className='col-span-12'>
               <FeaturedProject
-                type='Featured Project'
+                type='Next.js, Tailwind CSS, React.js, Framer Motion'
                 title='Code It .Wiki Portfolio'
                 img={portfolio}
                 github='/'
                 link='/'
-                summary='This is my portfolio website that I created using Next.js, Tailwind CSS, and Framer Motion.'
+                summary='My portfolio website highlighting my projects, blogs, and skills.'
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
