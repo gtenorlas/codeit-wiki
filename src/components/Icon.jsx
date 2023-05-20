@@ -460,3 +460,71 @@ export const MoonIcon = ({ className, ...rest }) => (
     </circle>
   </svg>
 );
+
+
+export const YoutubeIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    viewBox="0 0 512 512"
+    {...props}
+  >
+    <circle
+      cx={256}
+      cy={256}
+      r={256}
+      style={{
+        fill: "#dde3e4",
+      }}
+    />
+    <path
+      d="M168 456h176v8H168z"
+      style={{
+        fill: "#ccc",
+      }}
+    />
+    <path
+      d="M312 456H200l8-56h96z"
+      style={{
+        fill: "#adadad",
+      }}
+    />
+    <path
+      d="M448 360v32c0 4.4-3.6 8-8 8H72c-4.4 0-8-3.6-8-8v-32h384z"
+      style={{
+        fill: "#ccc",
+      }}
+    />
+    <path
+      d="M80 120h352v224H80z"
+      style={{
+        fill: "#fff",
+      }}
+    />
+    <path
+      d="M440 104H72c-4.4 0-8 3.6-8 8v248h384V112c0-4.4-3.6-8-8-8zm-8 240H80V120h352v224z"
+      style={{
+        fill: "#3b3b3b",
+      }}
+    />
+    <path
+      d="M80 120h352v224H80z"
+      style={{
+        fill: "#fff",
+      }}
+    />
+    <path
+      d="M352 304H160c-4.4 0-8-3.6-8-8V168c0-4.4 3.6-8 8-8h192c4.4 0 8 3.6 8 8v128c0 4.4-3.6 8-8 8z"
+      style={{
+        fill: "#db2b42",
+      }}
+    />
+    <path
+      d="m232 188 69.52 44L232 276z"
+      style={{
+        fill: "#fff",
+      }}
+    />
+  </svg>
+)
+
