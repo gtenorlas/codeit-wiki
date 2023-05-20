@@ -10,6 +10,8 @@ import {
   GithubIcon,
   SunIcon,
   MoonIcon,
+  YoutubeIcon,
+  InstagramIcon,
 } from "./Icon";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -131,7 +133,7 @@ const NavBar = () => {
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
           >
-            <DribbbleIcon />
+            <YoutubeIcon />
           </motion.a>
           <motion.a
             href="https://twitter.com/gene_tenorlas"
@@ -149,7 +151,7 @@ const NavBar = () => {
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
           >
-            <PinterestIcon />
+            <InstagramIcon />
           </motion.a>
           <button
             onClick={() => setMode(mode === "dark" ? "light" : "dark")}
@@ -225,7 +227,7 @@ const NavBar = () => {
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
             >
-              <DribbbleIcon />
+              <YoutubeIcon />
             </motion.a>
             <motion.a
               href="https://twitter.com/gene_tenorlas"
@@ -243,7 +245,7 @@ const NavBar = () => {
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
             >
-              <PinterestIcon />
+              <InstagramIcon />
             </motion.a>
             <button
               onClick={() => setMode(mode === "dark" ? "light" : "dark")}
