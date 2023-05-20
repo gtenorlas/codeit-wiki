@@ -160,7 +160,7 @@ const projects = () => {
                 type='HTML, Sass, Javascript, jQuery, Ajax'
                 title='Tweeter'
                 img={tweeter}
-                github='https://github.com/gtenorlas/tweeterr'
+                github='https://github.com/gtenorlas/tweeter'
                 link='https://github.com/gtenorlas/tweeter'
                 summary="Tweeter is a simple, single-page Twitter clone. Twit, like and responsive in different devices."
               />
@@ -170,8 +170,8 @@ const projects = () => {
                 type='Next.js, Tailwind CSS, React.js, Framer Motion'
                 title='Code It .Wiki Portfolio'
                 img={portfolio}
-                github='/'
-                link='/'
+                github='https://github.com/gtenorlas/codeit-wiki'
+                link='https://github.com/gtenorlas/codeit-wiki'
                 summary='My portfolio website highlighting my projects, blogs, and skills.'
               />
             </div>
