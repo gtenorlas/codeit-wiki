@@ -9,6 +9,8 @@ import portfolio from '../../public/images/projects/portfolio.png'
 import interviewScheduler from '../../public/images/projects/interview_scheduler.png'
 import learnthis from '../../public/images/projects/learnthis.png'
 import tweeter from '../../public/images/projects/tweeter.png'
+import spookle from '../../public/images/projects/spookle.png'
+import jungle_rails from "../../public/images/projects/jungle_rails.png"
 import { motion } from 'framer-motion'
 
 const FramerImage = motion(Image)
@@ -177,20 +179,22 @@ const projects = () => {
             </div>
             <div className='col-span-6 sm:col-span-12'>
               <Project
-                type='Project'
-                title='Interview Scheduler'
-                img={interviewScheduler}
-                github='https://github.com/gtenorlas/Interview-Scheduler'
-                link='https://github.com/gtenorlas/Interview-Scheduler'
+                type='Node.js, Express, EJS, PostgreSQL, Bootstrap, Sass'
+                title='Spookle'
+                img={spookle}
+                github='https://github.com/gtenorlas/midterm-quizapp'
+                link='https://github.com/gtenorlas/midterm-quizapp'
+                summary="Create a quiz and share it to public or privately to everyone using a link. Reports are generated to the creator of the quiz. "
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
               <Project
-                type='Project'
-                title='Interview Scheduler'
-                img={interviewScheduler}
-                github='https://github.com/gtenorlas/Interview-Scheduler'
-                link='https://github.com/gtenorlas/Interview-Scheduler'
+                type='Ruby, Rails, Bootstrap, PostgreSQL, Stripe'
+                title='Jungle Rails'
+                img={jungle_rails}
+                github='https://github.com/gtenorlas/jungle-rails'
+                link='https://github.com/gtenorlas/jungle-rails'
+                summary="A full-stack app for an e-commerce site with the integration of Stripe for payment processing."
               />
             </div>
           </div>
