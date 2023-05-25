@@ -4,7 +4,8 @@ import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
-import orm from '../../public/images/orm.png'
+import orm from '../../public/images/blogs/orm_javascript_002.png'
+import java from '../../public/images/blogs/javaspring_001.png'
 import { motion, useMotionValue } from 'framer-motion'
 
 const FramerImage = motion(Image)
@@ -114,11 +115,11 @@ const blogs = () => {
           <AnimatedText text='Stay up-to-date with Blogs' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />
           <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
             <FeaturedBlog
-              title='ORMs for JavaScript'
-              summary='Explain what ORM is and provide known ORMs in Javascript.'
-              time='9 min read'
-              link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
-              img={orm}
+              title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
+              summary='Explain what Spring Boot is and provide a quick example on how to get started with it.'
+              time='30 min read'
+              link='https://medium.com/@masterpieces79/building-a-full-stack-application-with-spring-boot-postgresql-and-java-c8468d97a0e7'
+              img={java}
             />
             <FeaturedBlog
               title='ORMs for JavaScript'
@@ -133,16 +134,16 @@ const blogs = () => {
           </h2>
           <ul>
             <Blog
-              title='ORMs for JavaScript'
-              summary='Explain what ORM is and provide known ORMs in Javascript.'
-              date='April, 5 2023'
+              title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
+              summary='Explain what Spring Boot is and provide a quick example on how to get started with it.'
+              date='May 21, 2023'
               link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
-              img={orm}
+              img={java}
             />
             <Blog
               title='ORMs for JavaScript'
               summary='Explain what ORM is and provide known ORMs in Javascript.'
-              date='April, 5 2023'
+              date='January 17, 2023'
               link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
               img={orm}
             />
