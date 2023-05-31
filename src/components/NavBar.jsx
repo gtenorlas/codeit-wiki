@@ -114,6 +114,7 @@ const NavBar = () => {
                 whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
+            aria-label='Visit my linkedin profile page'
           >
             <LinkedInIcon />
           </motion.a>
@@ -123,6 +124,7 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
+            aria-label='Visit my github profile page'
           >
             <GithubIcon />
           </motion.a>
@@ -132,6 +134,7 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
+            aria-label='Visit my youtube channel'
           >
             <YoutubeIcon />
           </motion.a>
@@ -141,6 +144,7 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
+            aria-label='Visit my twitter profile page'
           >
             <TwitterIcon />
           </motion.a>
@@ -150,6 +154,7 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
+            aria-label='Visit my instagram profile page'
           >
             <InstagramIcon />
           </motion.a>
@@ -208,6 +213,7 @@ const NavBar = () => {
                            whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
+              aria-label='Visit my linkedin profile page'
             >
               <LinkedInIcon />
             </motion.a>
@@ -217,6 +223,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 text-light dark:text-dark sm:mx-1"
+              aria-label='Visit my github profile page'
             >
               <GithubIcon />
             </motion.a>
@@ -226,6 +233,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
+              aria-label='Visit my youtube channel'
             >
               <YoutubeIcon />
             </motion.a>
@@ -235,6 +243,7 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
+              aria-label='Visit my twitter profile page'
             >
               <TwitterIcon />
             </motion.a>
@@ -244,11 +253,12 @@ const NavBar = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3 sm:mx-1"
+              aria-label='Visit my instagram profile page'
             >
               <InstagramIcon />
             </motion.a>
             <button
-              onClick={() => setMode(mode === "dark" ? "light" : "dark")}  aria-label="switch-theme" 
+              onClick={() => setMode(mode === "dark" ? "light" : "dark")}  aria-label="switch-theme"
               className={`ml-3 w-6 flex items-center justify-center rounded-full sm:mx-1
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
