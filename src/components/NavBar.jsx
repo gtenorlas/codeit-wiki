@@ -154,7 +154,7 @@ const NavBar = () => {
             <InstagramIcon />
           </motion.a>
           <button
-            onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+            onClick={() => setMode(mode === "dark" ? "light" : "dark")} aria-label="switch-theme"
             className={`ml-4 mr-4 w-7 flex items-center justify-center rounded-full p-1
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
           >
@@ -248,7 +248,7 @@ const NavBar = () => {
               <InstagramIcon />
             </motion.a>
             <button
-              onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+              onClick={() => setMode(mode === "dark" ? "light" : "dark")}  aria-label="switch-theme" 
               className={`ml-3 w-6 flex items-center justify-center rounded-full sm:mx-1
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
