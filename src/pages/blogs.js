@@ -89,8 +89,10 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link} target='_blank'>
-        <h2 className='capitalize text-2xl font-bold my-2 mt-4 hover:underline hover:underline-offset-2
-        xs:text-lg'>
+        <h2
+          className='capitalize text-2xl font-bold my-2 mt-4 hover:underline hover:underline-offset-2
+        xs:text-lg'
+        >
           {title}
         </h2>
       </Link>
@@ -112,7 +114,10 @@ const blogs = () => {
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
         <Layout className='pt-16'>
-          <AnimatedText text='Stay up-to-date with Blogs' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />
+          <AnimatedText
+            text='Stay up-to-date with Blogs'
+            className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
+          />
           <ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
             <FeaturedBlog
               title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
@@ -133,6 +138,13 @@ const blogs = () => {
             All Blogs
           </h2>
           <ul>
+            <Blog
+              title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
+              summary='Explain what Spring Boot is and provide a quick example on how to get started with it.'
+              date='May 21, 2023'
+              link='https://medium.com/@masterpieces79/building-a-full-stack-application-with-spring-boot-postgresql-and-java-c8468d97a0e7'
+              img={java}
+            />
             <Blog
               title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
               summary='Explain what Spring Boot is and provide a quick example on how to get started with it.'
