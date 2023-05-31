@@ -146,20 +146,13 @@ const blogs = () => {
               img={java}
             />
             <Blog
-              title='Building a Full-Stack Application with Spring Boot, PostgreSQL, and Java'
-              summary='Explain what Spring Boot is and provide a quick example on how to get started with it.'
-              date='May 21, 2023'
-              link='https://medium.com/@masterpieces79/building-a-full-stack-application-with-spring-boot-postgresql-and-java-c8468d97a0e7'
-              img={java}
-            />
-            <Blog
               title='ORMs for JavaScript'
               summary='Explain what ORM is and provide known ORMs in Javascript.'
               date='January 17, 2023'
               link='https://medium.com/@masterpieces79/orms-for-javascript-43ef4e10d9e8'
               img={orm}
             />
-          </ul>
+           </ul>
         </Layout>
       </main>
     </>
