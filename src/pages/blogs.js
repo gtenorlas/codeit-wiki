@@ -4,8 +4,8 @@ import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
-import orm from '../../public/images/blogs/orm_javascript_002.png'
-import java from '../../public/images/blogs/javaspring_001.png'
+import orm from '../../public/images/blogs/orm_javascript2_002.png'
+import java from '../../public/images/blogs/javaspring2_001.png'
 import { motion, useMotionValue } from 'framer-motion'
 
 const FramerImage = motion(Image)
