@@ -88,7 +88,7 @@ const FeaturedBlog = ({ img, title, time, summary, link }) => {
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
         />
       </Link>
-      <Link href={link} targt='_blank'>
+      <Link href={link} target='_blank'>
         <h2 className='capitalize text-2xl font-bold my-2 mt-4 hover:underline hover:underline-offset-2
         xs:text-lg'>
           {title}

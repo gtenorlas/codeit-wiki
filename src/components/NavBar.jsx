@@ -4,9 +4,7 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
   TwitterIcon,
-  DribbbleIcon,
   LinkedInIcon,
-  PinterestIcon,
   GithubIcon,
   SunIcon,
   MoonIcon,
