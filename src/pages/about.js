@@ -67,7 +67,7 @@ const about = () => {
                 looking for ways to contribute to the programming community.
               </p>
               <p className='font-medium'>
-                At Code IT Wiki, we are dedicated to helping businesses succeed
+                I am dedicated to helping businesses succeed
                 in the digital world. As a Full-Stack Developer, I am committed
                 to using my skills and experience to help launch your site and
                 turn your ideas into reality. I am excited to collaborate with
