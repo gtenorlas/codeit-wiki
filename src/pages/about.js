@@ -36,6 +36,8 @@ const about = () => {
         <title>Code It .Wiki | About Page</title>
         <meta name='keywords' content='about' />
         <meta name='description' content='Code It .Wiki About Page' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5108178665823416"
+     crossorigin="anonymous"></script>
       </Head>
       <main className='flex w-full flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>

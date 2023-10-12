@@ -18,6 +18,8 @@ export default function Home () {
           content='GeneTenorlas,homepage,codeit.wiki,portfolio, full-stack developer, back-end developer, front-end developer, mobile developer, full-stack engineer, mobile engineer, software engineer, software developer'
         />
         <meta name='description' content='My portfolio showcases top-tier web development projects & informative blogs. Let my skills and experiences bring your online vision to life.' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5108178665823416"
+     crossorigin="anonymous"></script>
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
         <Layout className='pt-0 md:pt-4 sm:pt-0'>

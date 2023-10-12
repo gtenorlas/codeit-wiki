@@ -111,6 +111,8 @@ const blogs = () => {
         <title>Code It .Wiki | Blogs Page</title>
         <meta name='keywords' content='blogs, codeitwiki, codeit' />
         <meta name='description' content='Blogs Page' />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5108178665823416"
+     crossorigin="anonymous"></script>
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
         <Layout className='pt-16'>
