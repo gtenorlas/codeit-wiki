@@ -42,7 +42,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
   return (
     <button
-      className={`${className} relative group my-2 text-light dark:text-dark text-lg font-medium`}
+      className={`${className} relative group my-1.5 text-light dark:text-dark text-base font-medium`}
       onClick={handleClick}
     >
       {title}
@@ -175,32 +175,32 @@ const NavBar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="w-[85vw] max-w-[320px] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/90 dark:bg-light/75 rounded-2xl backdrop-blur-md py-12 px-6 shadow-2xl"
+          className="w-[75vw] max-w-[270px] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      bg-dark/90 dark:bg-light/75 rounded-2xl backdrop-blur-md py-8 px-4 shadow-2xl"
         >
           {/* Close / X Button inside the modal */}
           <button
             onClick={handleClick}
-            className="absolute top-4 right-4 text-light dark:text-dark p-2 text-xl font-bold rounded-full hover:bg-light/10 transition-colors"
+            className="absolute top-2 right-2 text-light dark:text-dark p-1.5 text-lg font-bold rounded-full hover:bg-light/10 transition-colors"
             aria-label="Close menu"
           >
             ✕
           </button>
 
-          <nav className="flex items-center flex-col justify-center w-full text-center">
+          <nav className="flex items-center flex-col justify-center w-full text-center my-1">
             <CustomMobileLink toggle={handleClick} href="/" title="Home" className="w-full text-center" />
             <CustomMobileLink toggle={handleClick} href="/about" title="About" className="w-full text-center" />
             <CustomMobileLink toggle={handleClick} href="/projects" title="Projects" className="w-full text-center" />
             <CustomMobileLink toggle={handleClick} href="/blogs" title="Blogs" className="w-full text-center" />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap mt-6 w-full gap-3">
+          <nav className="flex items-center justify-center flex-wrap mt-4 w-full gap-2">
             <motion.a
               href="https://www.linkedin.com/in/genetenorlas/"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-1"
+              className="w-5 mx-0.5"
               aria-label="Visit my linkedin profile page"
             >
               <LinkedInIcon />
@@ -210,7 +210,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-1 text-light dark:text-dark"
+              className="w-5 mx-0.5 text-light dark:text-dark"
               aria-label="Visit my github profile page"
             >
               <GithubIcon />
@@ -220,7 +220,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-1"
+              className="w-5 mx-0.5"
               aria-label="Visit my youtube channel"
             >
               <YoutubeIcon />
@@ -230,7 +230,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-1"
+              className="w-5 mx-0.5"
               aria-label="Visit my twitter profile page"
             >
               <TwitterIcon />
@@ -240,7 +240,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-1"
+              className="w-5 mx-0.5"
               aria-label="Visit my instagram profile page"
             >
               <InstagramIcon />
@@ -252,9 +252,9 @@ const NavBar = () => {
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
               {mode === "dark" ? (
-                <SunIcon className={"fill-dark w-5 h-5"} />
+                <SunIcon className={"fill-dark w-4 h-4"} />
               ) : (
-                <MoonIcon className={"fill-dark w-5 h-5"} />
+                <MoonIcon className={"fill-dark w-4 h-4"} />
               )}
             </button>
           </nav>
