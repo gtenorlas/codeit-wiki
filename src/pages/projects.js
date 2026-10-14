@@ -13,33 +13,35 @@ import spookle from '../../public/images/projects/spookle.png'
 import jungle_rails from "../../public/images/projects/jungle_rails.png"
 import { motion } from 'framer-motion'
 
-const FramerImage = motion(Image)
+const FramerImage = motion.create(Image)
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className='relative w-full flex items-center justify-between rounded-br-2xl rounded-3xl
-    border border-solid border-dark bg-light shadow-2xl p-8 dark:bg-dark dark:border-light
-    lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
+    <article className='relative w-full flex items-center justify-between rounded-3xl rounded-br-2xl
+    border border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light shadow-2xl
+    lg:flex-col lg:p-6 sm:p-4 xs:p-3
     '>
-      <div className='absolute top-0 -right-3 -z-10 w-[100%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl
-       dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl
+       dark:bg-light lg:hidden' />
+
       <Link
         href={link}
         target='_blank'
-        className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full'
+        className='w-1/2 lg:w-full cursor-pointer overflow-hidden rounded-lg'
       >
         <FramerImage
           src={img}
           alt={title}
-          className='w-full h-auto'
+          className='w-full h-auto object-cover'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
         />
       </Link>
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
-        <span className='text-primary font-medium text-xl dark:text-primaryDark xs:text-base'>
+
+      <div className='w-1/2 lg:w-full flex flex-col items-start justify-between pl-6 lg:pl-0 lg:pt-6'>
+        <span className='text-primary font-medium text-xl dark:text-primaryDark sm:text-base xs:text-xs'>
           {type}
         </span>
         <Link
@@ -47,20 +49,21 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target='_blank'
           className='hover:underline underline-offset-2'
         >
-          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm'>
+          <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light lg:text-3xl sm:text-2xl xs:text-xl'>
             {title}
           </h2>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light sm:text-sm'>{summary}</p>
-        <div className='mt-2 flex items-center'>
-          <Link href={github} target='_blank' className='w-10'>
+        <p className='my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs'>{summary}</p>
+
+        <div className='mt-2 flex items-center w-full justify-between lg:justify-start'>
+          <Link href={github} target='_blank' className='w-10 sm:w-8 xs:w-6'>
             <GithubIcon />
           </Link>
           <Link
             href={link}
             target='_blank'
             className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-          dark:bg-light dark:text-dark sm:px-4 sm:text-base'
+          dark:bg-light dark:text-dark sm:px-4 sm:text-base xs:px-3 xs:py-1 xs:text-xs'
           >
             Visit Project
           </Link>
@@ -72,10 +75,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github, summary }) => {
   return (
-    <article className='w-full flex flex-col items-center justify-center rounded-2xl border border-solid
-     border-dark bg-light p-6 relative shadow-xl dark:bg-dark dark:border-light xs:p-4'>
+    <article className='relative w-full flex flex-col items-center justify-center rounded-2xl border border-solid
+     border-dark bg-light p-6 shadow-xl dark:bg-dark dark:border-light sm:p-4 xs:p-3'>
       <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[2rem]
-      bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]' />
+      bg-dark rounded-br-3xl dark:bg-light lg:hidden' />
+
       <Link
         href={link}
         target='_blank'
@@ -84,15 +88,16 @@ const Project = ({ title, type, img, link, github, summary }) => {
         <FramerImage
           src={img}
           alt={title}
-          className='w-full h-auto'
+          className='w-full h-auto object-cover'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />
       </Link>
-      <div className='w-full flex flex-col items-start justify-between mt-4'>
-        <span className='text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base'>
+
+      <div className='w-full flex flex-col items-start justify-between mt-4 xs:mt-2'>
+        <span className='text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base xs:text-xs'>
           {type}
         </span>
         <Link
@@ -100,18 +105,19 @@ const Project = ({ title, type, img, link, github, summary }) => {
           target='_blank'
           className='hover:underline underline-offset-2'
         >
-          <h2 className='my-2 w-full text-left text-3xl font-bold lg:text-2xl'>{title}</h2>
+          <h2 className='my-2 w-full text-left text-3xl font-bold lg:text-2xl sm:text-xl xs:text-lg'>{title}</h2>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light sm:text-xs'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light sm:text-xs xs:text-[11px]'>{summary}</p>
+
         <div className='w-full mt-2 flex items-center justify-between'>
           <Link
             href={link}
             target='_blank'
-            className='text-lg font-semibold underline md:text-base'
+            className='text-lg font-semibold underline md:text-base sm:text-sm xs:text-xs'
           >
             Visit
           </Link>
-          <Link href={github} target='_blank' className='w-8 md:w-6'>
+          <Link href={github} target='_blank' className='w-8 md:w-6 sm:w-6 xs:w-5'>
             <GithubIcon />
           </Link>
         </div>
@@ -129,15 +135,15 @@ const projects = () => {
         <meta name='description' content='Projects Page' />
       </Head>
 
-      <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
-        <Layout className='pt-8'>
+      <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
+        <Layout className='pt-16 sm:pt-8'>
           <AnimatedText
             text='Project&apos;s Creativity & Passion'
-            className='mb-12 lg:!text-5xl sm:mb-6 sm:!text-5xl xs:!text-3xl'
+            className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-5xl xs:!text-3xl text-center'
           />
 
-          <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
-            <div className='col-span-12'>
+          <div className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16 sm:gap-y-12 xs:gap-y-8 w-full'>
+            <div className='col-span-2 md:col-span-1'>
               <FeaturedProject
                 type='Node.js, Express, React.js, Material UI, PostgreSQL'
                 title='LearnThis!'
@@ -147,7 +153,7 @@ const projects = () => {
                 summary='Keep your resource bookmarks all in one convenient location while having a quick organizational system and a built in learning program to actually study from your saved materials!'
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className='col-span-1'>
               <Project
                 type='React.js, Jest, Cypress'
                 title='Interview Scheduler'
@@ -157,7 +163,7 @@ const projects = () => {
                 summary='Front-end app created in React.js. A single page application that allows users to book and cancel interviews.'
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className='col-span-1'>
               <Project
                 type='HTML, Sass, Javascript, jQuery, Ajax'
                 title='Tweeter'
@@ -167,7 +173,7 @@ const projects = () => {
                 summary="Tweeter is a simple, single-page Twitter clone. Twit, like and responsive in different devices."
               />
             </div>
-            <div className='col-span-12'>
+            <div className='col-span-2 md:col-span-1'>
               <FeaturedProject
                 type='Next.js, Tailwind CSS, React.js, Framer Motion'
                 title='Code It .Wiki Portfolio'
@@ -177,7 +183,7 @@ const projects = () => {
                 summary='My portfolio website highlighting my projects, blogs, and skills.'
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className='col-span-1'>
               <Project
                 type='Node.js, Express, EJS, PostgreSQL, Bootstrap, Sass'
                 title='Spookle'
@@ -187,7 +193,7 @@ const projects = () => {
                 summary="Create a quiz and share it to public or privately to everyone using a link. Reports are generated to the creator of the quiz. "
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+            <div className='col-span-1'>
               <Project
                 type='Ruby, Rails, Bootstrap, PostgreSQL, Stripe'
                 title='Jungle Rails'
