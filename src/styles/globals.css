@@ -3,8 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --breakpoint-*: initial;
-
   --font-mont: var(--font-mont);
 
   --color-dark: #1b1b1b;
@@ -12,7 +10,6 @@
   --color-primary: #ff6302;
   --color-primaryDark: #58E6D9;
 
-  /* Fixed for Tailwind v4: must use --animate-* prefix */
   --animate-spin-slow: spin 8s linear infinite;
 
   --background-image-circularLight: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);
