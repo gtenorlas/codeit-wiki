@@ -18,8 +18,6 @@ export default function Home () {
           content='GeneTenorlas,homepage,codeit.wiki,portfolio, full-stack developer, back-end developer, front-end developer, mobile developer, full-stack engineer, mobile engineer, software engineer, software developer'
         />
         <meta name='description' content='My portfolio showcases top-tier web development projects & informative blogs. Let my skills and experiences bring your online vision to life.' />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5108178665823416"
-     crossorigin="anonymous"></script>
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
         <Layout className='pt-0 md:pt-4 sm:pt-0'>
@@ -31,7 +29,7 @@ export default function Home () {
                 className='w-full h-auto pr-8 lg:hidden md:inline-block md:w-full'
                 priority
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
-              ></Image>
+              />
             </div>
             <div
               className='w-1/2 flex flex-col items-center self-center
@@ -56,7 +54,7 @@ export default function Home () {
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link
-                  href='https://resume.creddle.io/resume/8x8kylcpyj1'
+                  href='https://www.linkedin.com/in/genetenorlas/'
                   target='_blank'
                   className='flex item-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark
               dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
@@ -79,7 +77,7 @@ export default function Home () {
           </div>
         </Layout>
         <HireMe />
-        <div className='absolute right-8 bottom-8 inline=block w-24 md:hidden'>
+        <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
           <Image src={lightBulb} alt='CodeIt.Wiki' className='w-full h-auto' />
         </div>
       </main>
