@@ -173,10 +173,10 @@ const NavBar = () => {
       {/* Mobile Menu Overlay */}
       {isOpen ? (
         <motion.div
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="w-[75vw] max-w-[270px] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/90 dark:bg-light/75 rounded-2xl backdrop-blur-md py-8 px-4 shadow-2xl"
+          className="w-[75vw] max-w-[280px] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      bg-dark/90 dark:bg-light/75 rounded-2xl backdrop-blur-md py-6 px-5 shadow-2xl box-border"
         >
           {/* Close / X Button inside the modal */}
           <button
@@ -194,13 +194,13 @@ const NavBar = () => {
             <CustomMobileLink toggle={handleClick} href="/blogs" title="Blogs" className="w-full text-center" />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap mt-4 w-full gap-2">
+          <nav className="flex items-center justify-center flex-wrap mt-4 w-full gap-3 px-2">
             <motion.a
               href="https://www.linkedin.com/in/genetenorlas/"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-0.5"
+              className="w-5"
               aria-label="Visit my linkedin profile page"
             >
               <LinkedInIcon />
@@ -210,7 +210,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-0.5 text-light dark:text-dark"
+              className="w-5 text-light dark:text-dark"
               aria-label="Visit my github profile page"
             >
               <GithubIcon />
@@ -220,7 +220,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-0.5"
+              className="w-5"
               aria-label="Visit my youtube channel"
             >
               <YoutubeIcon />
@@ -230,7 +230,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-0.5"
+              className="w-5"
               aria-label="Visit my twitter profile page"
             >
               <TwitterIcon />
@@ -240,7 +240,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-5 mx-0.5"
+              className="w-5"
               aria-label="Visit my instagram profile page"
             >
               <InstagramIcon />
@@ -248,7 +248,7 @@ const NavBar = () => {
             <button
               onClick={() => setMode(mode === "dark" ? "light" : "dark")}
               aria-label="switch-theme"
-              className={`ml-1 flex items-center justify-center rounded-full p-1
+              className={`flex items-center justify-center rounded-full p-1
          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
               {mode === "dark" ? (
